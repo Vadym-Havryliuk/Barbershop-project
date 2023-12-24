@@ -1,0 +1,42 @@
+* {
+    box-sizing: border-box;
+}
+
+body {
+    padding: 0;
+    margin: 0;
+}
+
+h1, h2, h3, h4, h5, h6 {
+    margin: 0;
+    padding: 0;
+}
+
+.container {
+    display: flex;
+}
+
+.sidebar-block {
+    width: 150px;
+    height: 680px;
+}
+
+.logo {
+    margin: 32px auto;
+    display: block;
+}
+
+.links-networks {
+    display: flex;
+}
+
+.links-networks .line{
+    width: 60px;
+    height: 1px;
+    background-color: #303030;
+}
+
+.links-networks a {
+    color: #303030;
+    
+}
