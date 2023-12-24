@@ -28,6 +28,12 @@ h1, h2, h3, h4, h5, h6 {
 
 .links-networks {
     display: flex;
+    align-items: center;
+    position: absolute;
+    top: 470px;
+    left: -65px;
+    transform: rotate(-90deg);
+    gap: 40px;
 }
 
 .links-networks .line{
@@ -38,5 +44,49 @@ h1, h2, h3, h4, h5, h6 {
 
 .links-networks a {
     color: #303030;
-    
+    font-family: "Open Sans";
+    font-size: 11px;
+    font-weight: 600;
+    line-height: normal;
+    letter-spacing: 2.2px;
+    text-decoration: none;
 }
+
+.links-networks a:hover {
+    color: #FF6C00;
+}
+
+.main-block {
+    position: relative;
+    margin-right: 59px;
+    overflow-x: hidden;
+    flex-grow: 1;
+}
+
+.images {
+    width: 300%;
+    position: absolute;
+    z-index: -1;
+    display: flex;
+    top: 0;
+}
+
+.image {
+    height: 680px;
+    flex-grow: 1;
+    background-size: cover;
+    background-position: center center;
+}
+
+.image:nth-child(1) {
+    background-image: url("../img/slider-img-3.jpg");
+}
+
+.image:nth-child(2) {
+    background-image: url("../img/slider-img-2.jpg");
+}
+
+.image:nth-child(3) {
+    background-image: url("../img/slider-img-1.jpg");
+}
+
