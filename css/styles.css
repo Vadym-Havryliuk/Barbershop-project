@@ -282,3 +282,49 @@ h1 {
     background-color: white;
 }
 
+@media (max-width: 1150px) {
+    .navigation {
+        margin-left: 23px;
+        gap: 24px;
+    }
+
+    .main-content {
+        margin: 164px 37px 142px 70px;
+    }
+
+    h1 {
+        font-size: 48px;
+        letter-spacing: 2.4px; 
+    }
+
+    .main-text {
+        font-family: "Open Sans";
+        font-size: 16px;
+        line-height: 26px;
+        letter-spacing: 0.32px;
+        width: 349px;
+    }
+
+    .contacts {
+        flex-direction: column-reverse;
+    }
+    
+    .contacts .number {
+        margin-right: 0px;
+        text-align: center;
+    }
+    
+    .contacts a {
+        margin-right: 0px;
+        margin-bottom: 20px;
+    }
+
+    .nav-contacts {
+        align-items: baseline;
+    }
+
+    .back-next {
+        bottom: 34px;
+        right: 37px;
+    }
+}
