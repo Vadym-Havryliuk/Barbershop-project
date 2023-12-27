@@ -163,10 +163,6 @@ h1, h2, h3, h4, h5, h6 {
     margin: 188px 52px 142px 96px;
 }
 
-.text-content {
-
-}
-
 .quote {
     display: flex;
     align-items: center;
@@ -232,4 +228,57 @@ h1 {
     display: flex;
     flex-direction: column;
     justify-content: space-between;
+    align-items: flex-end;
 }
+
+.main-content .lines div {
+    width: 8px;
+    height: 2px;
+    background-color: #9DA4BD;
+}
+
+.main-content .lines div.active {
+    width: 17px;
+    background-color: white;
+}
+
+.back-next {
+    position: absolute;
+    bottom: 40px;
+    right: 48px;
+    display: flex;
+}
+
+.back {
+    margin-right: 25px;
+    text-align: right;
+    cursor: pointer;
+}
+
+.next {
+    cursor: pointer;
+}
+
+.text-b, .text-n {
+    font-family: "Open Sans";
+    font-size: 11px;
+    font-style: normal;
+    font-weight: 600;
+    line-height: normal;
+    letter-spacing: 1.1px;
+    margin-bottom: 10px;
+}
+
+.line-b, .line-n {
+    width: 60px;
+    height: 1px;
+} 
+
+.white-txt {
+    color: white;
+}
+
+.white-bg {
+    background-color: white;
+}
+
