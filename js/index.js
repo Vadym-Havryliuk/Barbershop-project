@@ -78,8 +78,62 @@ timerId = setInterval(changePosition, 9000);
 
 back.addEventListener('click', function() {
     clearTimers();
+
+    let name = images.classList[1];
+    let digit = +name[name.length - 1];
+
+    let subStr = name.substr(0, name.length - 1);
+
+    if (digit != 1) {
+        images.classList.replace(name, `${subStr}${digit - 1}`);
+
+        if (digit == 2) {
+            toggleBackSummary();
+        } else if (digit == 3) {
+            toggleNextSummary();
+        }
+    }
+
+    for (let i = 0; i < lines.length; i++) {
+        if (i == digit - 2) {
+            lines[i].classList.add('active');
+        } else if (lines[i].classList.contains('active')) {
+
+            if (digit != 1) {
+                lines[i].classList.remove('active');
+            }
+        }
+    }
 });
 
 next.addEventListener('click', function() {
     clearTimers();
-}); 
+
+    let name = images.classList[1];
+    let digit = +name[name.length - 1];
+
+    let subStr = name.substr(0, name.length - 1);
+
+    if (digit != 3) {
+        images.classList.replace(name, `${subStr}${digit + 1}`);
+
+        if (digit == 2) {
+            toggleNextSummary();
+        } else if (digit == 1) {
+            toggleBackSummary();
+        }
+    }
+
+    for (let i = 0; i < lines.length; i++) {
+        if (i == digit) {
+            lines[i].classList.add('active');
+        } else if (lines[i].classList.contains('active')) {
+
+            if (digit != lines.length) {
+                lines[i].classList.remove('active');
+            }
+        }
+    }
+});
+
+ 
