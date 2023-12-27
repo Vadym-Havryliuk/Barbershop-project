@@ -283,15 +283,15 @@ h1 {
 }
 
 .image-position-1 {
-    transform: translateX(0px);
+    left: 0;
 }
 
 .image-position-2 {
-    transform: translateX(-100%);
+    left: -100%;
 }
 
 .image-position-3 {
-    transform: translateX(-200%);
+    left: -200%;
 }
 
 @media (max-width: 1150px) {
