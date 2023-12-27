@@ -14,4 +14,4 @@ setInterval(function() {
     setTimeout(function() {
         images.classList.replace('image-position-3', 'image-position-1');
     }, 3000);
-});
+}, 3000);
