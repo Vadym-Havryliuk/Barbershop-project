@@ -94,6 +94,7 @@ h1, h2, h3, h4, h5, h6 {
     margin-top: 36px;
     display: flex;
     justify-content: space-between;
+    align-items: center;
 }
 
 .navigation {
@@ -117,3 +118,51 @@ h1, h2, h3, h4, h5, h6 {
     color: #FF6C00;
 }
 
+.contacts {
+    display: flex;
+    align-items: center;
+}
+
+.contacts .number {
+    color: #FFF;
+    font-family: "Open Sans";
+    font-size: 12px;
+    font-style: normal;
+    font-weight: 600;
+    line-height: normal;
+    letter-spacing: 1.2px;
+    margin-right: 40px;
+}
+
+.contacts a {
+    color: #FFF;
+    font-family: "Open Sans";
+    font-size: 12px;
+    font-style: normal;
+    font-weight: 600;
+    line-height: normal;
+    letter-spacing: 1.08px;
+    text-transform: uppercase;
+    text-decoration: none;
+    display: block;
+    padding: 12px 20px;
+    border: 1px solid #FF6C00;
+    border-radius: 20px;
+    margin-right: 5px;
+}
+
+.contacts a:hover {
+    color: white;
+    background-color: #FF6C00;
+}
+
+.main-content {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin: 188px 52px 142px 96px;
+}
+
+.text-content {
+    
+}
