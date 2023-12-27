@@ -2,10 +2,19 @@
 
 let images = document.querySelector('.images');
 let lines = document.querySelectorAll('.main-content .lines div');
+
 let textB = document.querySelector('.text-b');
 let lineB = document.querySelector('.line-b');
 let textN = document.querySelector('.text-n');
 let lineN = document.querySelector('.line-n');
+
+let back = document.querySelector('.back');
+let next = document.querySelector('.next');
+
+let timer1;
+let timer2;
+let timer3;
+let timerId;
 
 function toggleBack(whiteORgray) {
     textB.classList.toggle(`${whiteORgray}-txt`);
@@ -27,8 +36,17 @@ function toggleNextSummary() {
     toggleNext('gray');
 }
 
+function clearTimers() {
+    if (timerId) {
+        clearInterval(timerId);
+        clearInterval(timer1);
+        clearInterval(timer2);
+        clearInterval(timer3); 
+    }
+}
+
 function changePosition() {
-    setTimeout(function() {
+    timer1 = setTimeout(function() {
         images.classList.replace('image-position-1', 'image-position-2');
         lines[0].classList.remove('active');
         lines[1].classList.add('active');
@@ -36,7 +54,7 @@ function changePosition() {
         toggleBackSummary()
     }, 3000);
 
-    setTimeout(function() {
+    timer2 = setTimeout(function() {
         images.classList.replace('image-position-2', 'image-position-3');
         lines[1].classList.remove('active');
         lines[2].classList.add('active');
@@ -44,7 +62,7 @@ function changePosition() {
         toggleNextSummary()
     }, 6000);
 
-    setTimeout(function() {
+    timer3 = setTimeout(function() {
         images.classList.replace('image-position-3', 'image-position-1');
         lines[2].classList.remove('active');
         lines[0].classList.add('active');
@@ -56,4 +74,12 @@ function changePosition() {
 
 changePosition();
 
-setInterval(changePosition, 9000);
+timerId = setInterval(changePosition, 9000);
+
+back.addEventListener('click', function() {
+    clearTimers();
+});
+
+next.addEventListener('click', function() {
+    clearTimers();
+}); 
