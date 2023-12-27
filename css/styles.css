@@ -164,5 +164,72 @@ h1, h2, h3, h4, h5, h6 {
 }
 
 .text-content {
-    
+
+}
+
+.quote {
+    display: flex;
+    align-items: center;
+    margin-bottom: 20px;
+}
+
+.line-quote {
+    width: 63px;
+    height: 1px;
+    margin-right: 21px;
+}
+
+.main-quote {
+    font-family: "Open Sans";
+    font-size: 11px;
+    font-style: normal;
+    font-weight: 600;
+    line-height: normal;
+    letter-spacing: 1.1px;
+    text-transform: uppercase;
+}
+
+.gray-bg {
+    background: rgba(157, 164, 189, 0.60);
+}
+
+.gray-txt {
+    color: rgba(157, 164, 189, 0.60);
+}
+
+.black-bg {
+    background: #303030;
+}
+
+.black-txt {
+    color: #303030;
+}
+
+h1 {
+    color: #FFF;
+    font-family: "Raleway";
+    font-size: 72px;
+    font-style: normal;
+    font-weight: 700;
+    line-height: normal;
+    letter-spacing: 3.6px;
+    margin-bottom: 20px;
+}
+
+.main-text {
+    color: #9DA4BD;
+    font-family: "Open Sans";
+    font-size: 18px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 30px;
+    letter-spacing: 0.36px;
+    width: 400px;
+}
+
+.main-content .lines {
+    height: 30px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
 }
