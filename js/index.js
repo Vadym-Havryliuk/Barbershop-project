@@ -50,7 +50,7 @@ function replace1() {
     lines[0].classList.remove('active');
     lines[1].classList.add('active');
 
-    toggleBackSummary()
+    toggleBackSummary();
 }
 
 function replace2() {
@@ -58,7 +58,7 @@ function replace2() {
     lines[1].classList.remove('active');
     lines[2].classList.add('active');
 
-    toggleNextSummary()
+    toggleNextSummary();
 }
 
 function replace3() {
@@ -66,8 +66,8 @@ function replace3() {
     lines[2].classList.remove('active');
     lines[0].classList.add('active');
 
-    toggleBackSummary()
-    toggleNextSummary()
+    toggleBackSummary();
+    toggleNextSummary();  
 }
  
 function changePosition() {
@@ -78,24 +78,22 @@ function changePosition() {
     timer3 = setTimeout(replace3, 9000);
 }
 
+function changePosition1() {
+    timer1 = setTimeout(replace1, 3000);
+    timer2 = setTimeout(replace2, 6000);
+    timer3 = setTimeout(replace3, 9000);
+}
+
 function changePosition2() {
-    switch(images.classList[1]) {
-        case 'image-position-1':
-            timer1 = setTimeout(replace1, 3000);
-            timer2 = setTimeout(replace2, 6000);
-            timer3 = setTimeout(replace3, 9000);
-        break;
-        case 'image-position-2':
-            timer2 = setTimeout(replace2, 3000);
-            timer3 = setTimeout(replace3, 6000);
-            timer1 = setTimeout(replace1, 9000);
-        break;
-        case 'image-position-3':
-            timer3 = setTimeout(replace3, 3000);
-            timer1 = setTimeout(replace1, 6000);
-            timer2 = setTimeout(replace2, 9000);
-        break;
-    }
+    timer2 = setTimeout(replace2, 3000);
+    timer3 = setTimeout(replace3, 6000);
+    timer1 = setTimeout(replace1, 9000);
+}
+
+function changePosition3() {
+    timer3 = setTimeout(replace3, 3000);
+    timer1 = setTimeout(replace1, 6000);
+    timer2 = setTimeout(replace2, 9000);
 }
 
 changePosition();
@@ -131,8 +129,20 @@ back.addEventListener('click', function() {
         }
     }
 
-    changePosition2();
-    timerId = setInterval(changePosition2, 9000);
+    switch(images.classList[1]) {
+        case 'image-position-1':
+            changePosition1();
+            timerId = setInterval(changePosition1, 9000);
+        break;
+        case 'image-position-2':
+            changePosition2();
+            timerId = setInterval(changePosition2, 9000);
+        break;
+        case 'image-position-3':
+            changePosition3();
+            timerId = setInterval(changePosition3, 9000);
+        break;
+    }
 });
 
 next.addEventListener('click', function() {
@@ -164,8 +174,20 @@ next.addEventListener('click', function() {
         }
     }
 
-    changePosition2();
-    timerId = setInterval(changePosition2, 9000);
+    switch(images.classList[1]) {
+        case 'image-position-1':
+            changePosition1();
+            timerId = setInterval(changePosition1, 9000);
+        break;
+        case 'image-position-2':
+            changePosition2();
+            timerId = setInterval(changePosition2, 9000);
+        break;
+        case 'image-position-3':
+            changePosition3();
+            timerId = setInterval(changePosition3, 9000);
+        break;
+    }
 });
 
  
