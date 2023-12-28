@@ -45,31 +45,57 @@ function clearTimers() {
     }
 }
 
+function replace1() {
+    images.classList.replace('image-position-1', 'image-position-2');
+    lines[0].classList.remove('active');
+    lines[1].classList.add('active');
+
+    toggleBackSummary()
+}
+
+function replace2() {
+    images.classList.replace('image-position-2', 'image-position-3');
+    lines[1].classList.remove('active');
+    lines[2].classList.add('active');
+
+    toggleNextSummary()
+}
+
+function replace3() {
+    images.classList.replace('image-position-3', 'image-position-1');
+    lines[2].classList.remove('active');
+    lines[0].classList.add('active');
+
+    toggleBackSummary()
+    toggleNextSummary()
+}
+ 
 function changePosition() {
-    timer1 = setTimeout(function() {
-        images.classList.replace('image-position-1', 'image-position-2');
-        lines[0].classList.remove('active');
-        lines[1].classList.add('active');
+    timer1 = setTimeout(replace1, 3000);
 
-        toggleBackSummary()
-    }, 3000);
+    timer2 = setTimeout(replace2, 6000);
 
-    timer2 = setTimeout(function() {
-        images.classList.replace('image-position-2', 'image-position-3');
-        lines[1].classList.remove('active');
-        lines[2].classList.add('active');
+    timer3 = setTimeout(replace3, 9000);
+}
 
-        toggleNextSummary()
-    }, 6000);
-
-    timer3 = setTimeout(function() {
-        images.classList.replace('image-position-3', 'image-position-1');
-        lines[2].classList.remove('active');
-        lines[0].classList.add('active');
-
-        toggleBackSummary()
-        toggleNextSummary()
-    }, 9000);
+function changePosition2() {
+    switch(images.classList[1]) {
+        case 'image-position-1':
+            timer1 = setTimeout(replace1, 3000);
+            timer2 = setTimeout(replace2, 6000);
+            timer3 = setTimeout(replace3, 9000);
+        break;
+        case 'image-position-2':
+            timer2 = setTimeout(replace2, 3000);
+            timer3 = setTimeout(replace3, 6000);
+            timer1 = setTimeout(replace1, 9000);
+        break;
+        case 'image-position-3':
+            timer3 = setTimeout(replace3, 3000);
+            timer1 = setTimeout(replace1, 6000);
+            timer2 = setTimeout(replace2, 9000);
+        break;
+    }
 }
 
 changePosition();
@@ -104,6 +130,9 @@ back.addEventListener('click', function() {
             }
         }
     }
+
+    changePosition2();
+    timerId = setInterval(changePosition2, 9000);
 });
 
 next.addEventListener('click', function() {
@@ -134,6 +163,9 @@ next.addEventListener('click', function() {
             }
         }
     }
+
+    changePosition2();
+    timerId = setInterval(changePosition2, 9000);
 });
 
  
