@@ -11,10 +11,18 @@ let lineN = document.querySelector('.line-n');
 let back = document.querySelector('.back');
 let next = document.querySelector('.next');
 
+let sidebarBlock = document.querySelector('.sidebar-block');
+let navContacts = document.querySelector('.nav-contacts');
+let container = document.querySelector('header .container');
+let mainBlock = document.querySelector('.main-block');
+
 let timer1;
 let timer2;
 let timer3;
 let timerId;
+
+let menu = document.querySelector('.menu');
+let logo = document.querySelector('.logo');
 
 function toggleBack(whiteORgray) {
     textB.classList.toggle(`${whiteORgray}-txt`);
@@ -189,5 +197,22 @@ next.addEventListener('click', function() {
         break;
     }
 });
+
+function changeDocument() {
+    if (document.documentElement.clientWidth <= 768) {
+        menu.before(logo);
+        logo.src = 'img/logo-2.svg';
+        container.append(navContacts);
+        navContacts.append(sidebarBlock);
+    } else if (document.documentElement.clientWidth > 768) {
+        container.prepend(sidebarBlock);
+        mainBlock.prepend(navContacts);
+        sidebarBlock.prepend(logo);
+        logo.src = 'img/logo.svg';
+    }
+};
+
+changeDocument();
+window.addEventListener('resize', changeDocument);
 
  

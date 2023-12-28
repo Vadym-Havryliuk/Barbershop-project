@@ -97,6 +97,10 @@ h1, h2, h3, h4, h5, h6 {
     align-items: center;
 }
 
+.close {
+    display: none;
+}
+
 .navigation {
     margin-left: 40px;
     display: flex;
@@ -105,7 +109,7 @@ h1, h2, h3, h4, h5, h6 {
 
 .navigation a {
     text-decoration: none;
-    font-family: Open Sans;
+    font-family: "Open Sans";
     font-size: 12px;
     font-style: normal;
     font-weight: 600;
@@ -353,8 +357,43 @@ h1 {
         display: none;
     }
 
+    .logo {
+        display: block;
+        position: absolute;
+        top: 40px;
+        left: 31px;
+        margin: 0;
+    }
+
     .nav-contacts {
-        display: none;
+        position: absolute;
+        background-color: white;
+        top: 0;
+        bottom: 0;
+        right: 0;
+        width: 337px;
+        z-index: 3;
+        flex-direction: column;
+        justify-content: flex-start;
+        margin: 0;
+    }
+
+    .close {
+        display: block;
+        position: absolute;
+        top: 48px;
+        right: 31px;
+    }
+
+    .navigation {
+        flex-direction: column;
+        margin: 118px 40px 64px;
+    }
+
+    .navigation a {
+        color: #303030;
+        font-size: 18px;
+        letter-spacing: 1.8px;
     }
 
     .main-content .lines {
