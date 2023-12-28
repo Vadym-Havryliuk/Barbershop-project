@@ -5,6 +5,7 @@
 body {
     padding: 0;
     margin: 0;
+    overflow-x: hidden;
 }
 
 h1, h2, h3, h4, h5, h6 {
@@ -366,7 +367,7 @@ h1 {
         background-color: white;
         top: 0;
         bottom: 0;
-        right: 0;
+        right: -338px;
         width: 337px;
         z-index: 3;
         flex-direction: column;
@@ -412,17 +413,36 @@ h1 {
         padding: 12px 37px;
         border-radius: 20px;
         margin-right: 0px;
+        margin-bottom: 0px;
     }
 
     .sidebar-block {
-        
+        width: 220px;
     }
 
     .links-networks {
         transform: rotate(0deg);
         position: static;
-        align-items: center;
-        flex-direction: column;
+        align-items: flex-start;
+        flex-wrap: wrap;
+        align-items: flex-start;
+        gap: 0;
+        margin: 0;
+    }
+
+    .links-networks a {
+        font-size: 14px;
+        letter-spacing: 2.8px;
+    }
+
+    .links-networks .line {
+        margin-right: 40px;
+        margin-bottom: 33px;
+        margin-top: 10px;
+    }
+
+    .links-networks a:last-child {
+        margin-left: 100px;
     }
 
     .main-content .lines {
@@ -436,6 +456,7 @@ h1 {
     .main-block {
         height: 580px;
         margin-right: 0;
+        width: 100%;
     }
 
     .main-content {
@@ -452,5 +473,9 @@ h1 {
         top: 48px;
         right: 31px;
         cursor: pointer;
+    }
+
+    .image {
+        height: 580px;
     }
 }

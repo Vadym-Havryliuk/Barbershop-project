@@ -24,6 +24,9 @@ let timerId;
 let menu = document.querySelector('.menu');
 let logo = document.querySelector('.logo');
 
+let linksNetworks = document.querySelector('.links-networks');
+let socialNetworks = document.querySelectorAll('.links-networks a');
+
 function toggleBack(whiteORgray) {
     textB.classList.toggle(`${whiteORgray}-txt`);
     lineB.classList.toggle(`${whiteORgray}-bg`);
@@ -204,7 +207,7 @@ function changeDocument() {
         logo.src = 'img/logo-2.svg';
         container.append(navContacts);
         navContacts.append(sidebarBlock);
-        
+
     } else if (document.documentElement.clientWidth > 768) {
         container.prepend(sidebarBlock);
         mainBlock.prepend(navContacts);
