@@ -294,7 +294,15 @@ h1 {
     left: -200%;
 }
 
+.menu {
+    display: none;
+}
+
 @media (max-width: 1150px) {
+    .main-block {
+        margin-right: 39px;
+    }
+    
     .navigation {
         margin-left: 23px;
         gap: 24px;
@@ -327,7 +335,6 @@ h1 {
     }
     
     .contacts a {
-        margin-right: 0px;
         margin-bottom: 20px;
     }
 
@@ -338,5 +345,44 @@ h1 {
     .back-next {
         bottom: 34px;
         right: 37px;
+    }
+}
+
+@media (max-width: 768px) {
+    .sidebar-block {
+        display: none;
+    }
+
+    .nav-contacts {
+        display: none;
+    }
+
+    .main-content .lines {
+        display: none;
+    }
+
+    .back-next {
+        display: none;
+    }
+
+    .main-block {
+        height: 580px;
+        margin-right: 0;
+    }
+
+    .main-content {
+        margin: 208px 0px 0px 31px;
+    }
+
+    .main-text {
+        width: 306px;
+    }
+
+    .menu {
+        display: block;
+        position: absolute;
+        top: 48px;
+        right: 31px;
+        cursor: pointer;
     }
 }
