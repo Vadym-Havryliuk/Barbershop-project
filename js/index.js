@@ -204,6 +204,7 @@ function changeDocument() {
         logo.src = 'img/logo-2.svg';
         container.append(navContacts);
         navContacts.append(sidebarBlock);
+        
     } else if (document.documentElement.clientWidth > 768) {
         container.prepend(sidebarBlock);
         mainBlock.prepend(navContacts);

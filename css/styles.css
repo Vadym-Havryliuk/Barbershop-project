@@ -353,10 +353,6 @@ h1 {
 }
 
 @media (max-width: 768px) {
-    .sidebar-block {
-        display: none;
-    }
-
     .logo {
         display: block;
         position: absolute;
@@ -394,6 +390,39 @@ h1 {
         color: #303030;
         font-size: 18px;
         letter-spacing: 1.8px;
+    }
+
+    .contacts {
+        flex-direction: column;
+        align-items: flex-start;
+        margin-bottom: 64px;
+    }
+
+    .contacts .number {
+        color: #303030;
+        font-size: 18px;
+        font-weight: 600;
+        letter-spacing: 1.8px;
+        margin-bottom: 24px;
+        margin-right: 0px;
+    }
+    
+    .contacts a {
+        color: #303030;
+        padding: 12px 37px;
+        border-radius: 20px;
+        margin-right: 0px;
+    }
+
+    .sidebar-block {
+        
+    }
+
+    .links-networks {
+        transform: rotate(0deg);
+        position: static;
+        align-items: center;
+        flex-direction: column;
     }
 
     .main-content .lines {
