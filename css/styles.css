@@ -299,7 +299,7 @@ h1 {
     left: -200%;
 }
 
-.menu {
+.menu, .shadow {
     display: none;
 }
 
@@ -354,6 +354,14 @@ h1 {
 }
 
 @media (max-width: 768px) {
+    header {
+        width: 100%;
+    }
+
+    .continer {
+        width: 100%;
+    }
+
     .logo {
         display: block;
         position: absolute;
@@ -367,12 +375,31 @@ h1 {
         background-color: white;
         top: 0;
         bottom: 0;
-        right: -338px;
+        right: 0;
         width: 337px;
         z-index: 3;
         flex-direction: column;
         justify-content: flex-start;
         margin: 0;
+        transform: translateX(337px);
+        transition-property: transform;
+        transition-duration: 500ms;
+    }
+
+    .nav-contacts-show {
+        position: absolute;
+        background-color: white;
+        top: 0;
+        bottom: 0;
+        right: 0;
+        width: 337px;
+        z-index: 3;
+        flex-direction: column;
+        justify-content: flex-start;
+        margin: 0;
+        transform: translateX(0px);
+        transition-property: transform;
+        transition-duration: 500ms;
     }
 
     .close {
@@ -397,6 +424,7 @@ h1 {
         flex-direction: column;
         align-items: flex-start;
         margin-bottom: 64px;
+        margin-left: 40px;
     }
 
     .contacts .number {
@@ -418,6 +446,7 @@ h1 {
 
     .sidebar-block {
         width: 220px;
+        margin-left: 40px;
     }
 
     .links-networks {
@@ -477,5 +506,31 @@ h1 {
 
     .image {
         height: 580px;
+    }
+
+    .block-shadow {
+        display: block;
+        position: absolute;
+        top: 0;
+        bottom: 0;
+        left: 0;
+        right: 0;
+        background-color: rgba(25, 28, 38, 0);
+        z-index: 2;
+        transition-property: background-color;
+        transition-duration: 500ms;
+    }
+
+    .block-shadow-dark {
+        display: block;
+        position: absolute;
+        top: 0;
+        bottom: 0;
+        left: 0;
+        right: 0;
+        background-color: rgba(25, 28, 38, 0.20);
+        z-index: 2;
+        transition-property: background-color;
+        transition-duration: 500ms;
     }
 }

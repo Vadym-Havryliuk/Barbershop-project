@@ -23,6 +23,8 @@ let timerId;
 
 let menu = document.querySelector('.menu');
 let logo = document.querySelector('.logo');
+let closeButton = document.querySelector('.close');
+let shadow = document.querySelector('.shadow');
 
 let linksNetworks = document.querySelector('.links-networks');
 let socialNetworks = document.querySelectorAll('.links-networks a');
@@ -201,7 +203,24 @@ next.addEventListener('click', function() {
     }
 });
 
+function changeClass1() {
+    navContacts.classList.replace('nav-contacts', 'nav-contacts-show');
+    shadow.classList.replace('shadow', 'block-shadow');
+    shadow.classList.replace('block-shadow', 'block-shadow-dark');
+}
+
+function changeClass2() {
+    navContacts.classList.replace('nav-contacts-show', 'nav-contacts');
+    shadow.classList.replace('block-shadow-dark', 'block-shadow');
+
+    setTimeout(function() {
+        shadow.classList.replace('block-shadow', 'shadow');
+    }, 500);
+}
+
 function changeDocument() {
+    let contactsShow = navContacts.classList.contains('nav-contacts-show');
+
     if (document.documentElement.clientWidth <= 768) {
         menu.before(logo);
         logo.src = 'img/logo-2.svg';
@@ -209,6 +228,11 @@ function changeDocument() {
         navContacts.append(sidebarBlock);
 
     } else if (document.documentElement.clientWidth > 768) {
+        if (contactsShow) {
+            navContacts.classList.replace('nav-contacts-show', 'nav-contacts');
+            shadow.classList.replace('block-shadow-dark', 'shadow');
+        }
+
         container.prepend(sidebarBlock);
         mainBlock.prepend(navContacts);
         sidebarBlock.prepend(logo);
@@ -218,5 +242,9 @@ function changeDocument() {
 
 changeDocument();
 window.addEventListener('resize', changeDocument);
+
+menu.addEventListener('click', changeClass1);
+
+closeButton.addEventListener('click', changeClass2);
 
  
