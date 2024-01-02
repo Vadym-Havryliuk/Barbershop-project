@@ -206,7 +206,11 @@ next.addEventListener('click', function() {
 function changeClass1() {
     navContacts.classList.replace('nav-contacts', 'nav-contacts-show');
     shadow.classList.replace('shadow', 'block-shadow');
-    shadow.classList.replace('block-shadow', 'block-shadow-dark');
+    
+    setTimeout(function() {
+        shadow.classList.replace('block-shadow', 'block-shadow-dark'); 
+    }, 10);
+    
 }
 
 function changeClass2() {
