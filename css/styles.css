@@ -534,3 +534,57 @@ h1 {
         transition-duration: 500ms;
     }
 }
+
+@media (max-width: 420px) {
+    .menu {
+        top: 28px;
+        right: 20px;
+        width: 34px;
+    }
+
+    .logo {
+        top: 25px;
+        left: 20px;
+        width: 48px;
+    }
+
+    .main-content {
+        margin: 150px 0px 0px 20px;
+    }
+
+    .line-quote {
+        display: none;
+    }
+
+    .quote {
+        margin-bottom: 10px;
+        margin-right: 100px;
+        width: auto;
+    }
+    
+    .main-quote {
+        font-size: 10px;
+    }
+
+    h1 {
+        font-size: 30px;
+        letter-spacing: 2.4px;
+        margin-bottom: 10px; 
+    }
+
+    .main-text {
+        font-size: 12px;
+        line-height: normal;
+        max-width: 200px;
+        width: auto;
+        margin-right: 100px;
+    }
+
+    .main-block {
+        height: 450px;
+    }
+
+    .image {
+        height: 450px;
+    }
+}
