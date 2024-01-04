@@ -152,6 +152,7 @@ h1, h2, h3, h4, h5, h6, p {
 
 .contacts a {
     color: #FFF;
+    margin-right: 5px;
 }
 
 .button {
@@ -167,7 +168,6 @@ h1, h2, h3, h4, h5, h6, p {
     padding: 12px 20px;
     border: 1px solid #FF6C00;
     border-radius: 20px;
-    margin-right: 5px;
 }
 
 .white-button {
@@ -386,6 +386,7 @@ h2 {
 
 h2.white-h2 {
     color: white;
+    text-align: left;
 }
 
 .big-image {
@@ -403,13 +404,14 @@ h2.white-h2 {
     right: 0;
     left: 0;
     background-color: #111319;
-    opacity: 0.8;
+    opacity: 0.7;
     height: 100%;
 }
 
 .services-prices {
     z-index: 2;
     position: relative;
+    text-align: center;
 }
 
 .blocks-services {
@@ -428,6 +430,37 @@ h2.white-h2 {
 
 .block-services:last-child {
     background: linear-gradient(180deg, #090B13 0%, rgba(9, 11, 19, 0.20) 100%);
+}
+
+.about-service {
+    display: flex;
+    justify-content: space-between;
+}
+
+.about-service:not(:last-child) {
+    margin-bottom: 20px;
+}
+
+.service-price {
+    color: #9DA4BD;
+    font-family: "Open Sans";
+    font-size: 18px;
+    font-weight: 400;
+    line-height: 30px;
+    letter-spacing: 0.36px;
+}
+
+.decoration {
+    background-color: rgba(157, 164, 189, 0.12);
+    height: 1px;
+    flex-grow: 1;
+    margin-top: 22px;
+    margin-right: 6px;
+    margin-left: 6px;
+}
+
+.services-prices .button{
+    margin: 0 auto;
 }
 
 @media (max-width: 1150px) {
@@ -502,6 +535,37 @@ h2.white-h2 {
         font-size: 16px;
         line-height: 26px;
         letter-spacing: 0.32px;
+    }
+
+    h2.white-h2 {
+        font-size: 42px;
+    }
+
+    .big-image {
+        padding: 100px 39px;
+    }
+
+    .blocks-services {
+        background: linear-gradient(180deg, #171A24 0%, rgba(23, 26, 36, 0.20) 100%);
+        flex-direction: column;
+        padding: 30px 40px;
+    }
+    
+    .block-services {
+        padding: 0;
+        flex-basis: 50%;
+    }
+    
+    .block-services:first-child {
+        background: none;
+    }
+    
+    .block-services:last-child {
+        background: none;
+    }
+
+    .block-services:not(:last-child) .about-service:last-child {
+        margin-bottom: 20px;
     }
 }
 
@@ -708,6 +772,47 @@ h2.white-h2 {
         width: auto;
         max-width: 500px;
     }
+
+    .big-image {
+        padding: 84px 31px;
+    }
+
+    .service-price {
+        font-size: 14px;
+        letter-spacing: 0.28px;
+    }
+
+    .blocks-services {
+        padding: 30px;
+    }
+
+    .decoration {
+        margin-top: 19px;
+    }
+}
+
+@media (max-width: 480px) {
+    .big-image {
+        padding: 50px 20px;
+    }
+
+    .services-prices .line-quote {
+        display: none;
+        text-align: left;
+    }
+
+    .services-prices .main-quote {
+        text-align: left;
+    }
+
+    h2.white-h2 {
+        font-size: 22px;
+    }
+
+    .blocks-services {
+        margin: 30px 0;
+        padding: 15px;
+    }
 }
 
 @media (max-width: 420px) {
@@ -861,5 +966,49 @@ h2.white-h2 {
         font-size: 11px;
         line-height: 15px;
         margin-bottom: 20px;
-    } 
+    }
+
+    .block-services:first-child .about-service {
+        margin-bottom: 10px;
+    }
+
+    .block-services:first-child .about-service:last-child {
+        margin-bottom: 10px;
+    }
+    
+    .block-services:last-child .about-service:not(:last-child) {
+        margin-bottom: 10px;
+    }
+
+    .service-price {
+        font-size: 11px;
+        letter-spacing: 0.22px;
+    }
+
+    .decoration {
+        margin-top: 17px;
+    }
+}
+
+@media (max-width: 320px) {
+    .service {
+        text-align: left;
+        width: auto;
+        max-width: 100px;
+        line-height: normal;
+    }
+
+    .about-service {
+        align-items: center;
+    }
+
+    .decoration {
+        margin-top: 0;
+        width: auto;
+    }
+
+    .price {
+        line-height: normal;
+        width: auto;
+    }
 }
