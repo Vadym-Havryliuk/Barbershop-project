@@ -741,7 +741,7 @@ h2 {
         margin-right: 0px;
     }
     
-    .contacts a {
+    .contacts a, .button {
         padding: 10px 20px;
         border-radius: 20px;
         margin-right: 0px;
@@ -788,4 +788,23 @@ h2 {
     .about-us {
         margin: 50px 20px;
     }
+
+    h2 {
+        margin-bottom: 10px;
+        font-size: 22px;
+        letter-spacing: 1.1px;
+    }
+
+    .about-us-text .main-text {
+        font-size: 12px;
+        line-height: 18px;
+        letter-spacing: 0.3px;
+        margin-bottom: 10px;
+    }
+    
+    .text-about-us {
+        font-size: 11px;
+        line-height: 15px;
+        margin-bottom: 20px;
+    } 
 }
