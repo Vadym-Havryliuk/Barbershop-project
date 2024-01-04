@@ -8,7 +8,7 @@ body {
     overflow-x: hidden;
 }
 
-h1, h2, h3, h4, h5, h6 {
+h1, h2, h3, h4, h5, h6, p {
     margin: 0;
     padding: 0;
 }
@@ -141,6 +141,9 @@ h1, h2, h3, h4, h5, h6 {
 
 .contacts a {
     color: #FFF;
+}
+
+.button {
     font-family: "Open Sans";
     font-size: 12px;
     font-style: normal;
@@ -149,11 +152,19 @@ h1, h2, h3, h4, h5, h6 {
     letter-spacing: 1.08px;
     text-transform: uppercase;
     text-decoration: none;
-    display: block;
+    display: inline-block;
     padding: 12px 20px;
     border: 1px solid #FF6C00;
     border-radius: 20px;
     margin-right: 5px;
+}
+
+.white-button {
+    color: #FFF;
+}
+
+.black-button {
+    color: #303030;
 }
 
 .contacts a:hover {
@@ -218,7 +229,6 @@ h1 {
 }
 
 .main-text {
-    color: #9DA4BD;
     font-family: "Open Sans";
     font-size: 18px;
     font-style: normal;
@@ -226,6 +236,14 @@ h1 {
     line-height: 30px;
     letter-spacing: 0.36px;
     width: 400px;
+}
+
+.main-text-gray {
+    color: #9DA4BD;
+}
+
+.main-text-black {
+    color: #555555;
 }
 
 .main-content .lines {
@@ -303,6 +321,60 @@ h1 {
     display: none;
 }
 
+.about-us {
+    margin: 139px 91px 121px 55px;
+    display: flex;
+    justify-content: space-between;
+}
+
+.two-images {
+    display: flex;
+    gap: 30px;
+    margin-right: 64px;
+}
+
+.two-images div {
+    width: 270px;
+    height: 445px;
+    background-size: cover; 
+    background-position: center;
+}
+
+.two-images div:first-child {
+    background-image: url("../img/img-1.jpg");
+}
+
+.two-images div:last-child {
+    background-image: url("../img/img-2.jpg");
+}
+
+.about-us-text .main-text {
+    width: auto;
+    margin-bottom: 20px;
+}
+
+.text-about-us {
+    color: #555;
+    font-family: "Open Sans";
+    font-size: 14px;
+    font-weight: 400;
+    line-height: 26px;
+    letter-spacing: 0.28px;
+    margin-bottom: 40px;
+}
+
+h2 {
+    color: #303030;
+    font-family: "Raleway";
+    font-size: 42px;
+    font-weight: 700;
+    line-height: normal;
+    letter-spacing: 2.1px;
+    margin-bottom: 20px;
+}
+
+
+
 @media (max-width: 1150px) {
     .main-block {
         margin-right: 39px;
@@ -350,6 +422,31 @@ h1 {
     .back-next {
         bottom: 34px;
         right: 37px;
+    }
+
+    .about-us {
+        margin: 100px 39px 103px;
+    }
+    
+    .two-images {
+        flex-direction: column;
+        margin-right: 30px;
+    }
+
+    .two-images div {
+        width: 330px;
+        height: 235px;
+    }
+
+    h2 {
+        font-size: 28px;
+        letter-spacing: 1.4px;
+    }
+
+    .about-us-text .main-text{
+        font-size: 16px;
+        line-height: 26px;
+        letter-spacing: 0.32px;
     }
 }
 
@@ -533,6 +630,29 @@ h1 {
         transition-property: background-color;
         transition-duration: 500ms;
     }
+
+    .two-images {
+        display: none;
+    }
+
+    .about-us {
+        margin: 84px 31px;
+    }
+
+    .about-us h2 {
+        max-width: 330px;
+        width: auto; 
+    }
+
+    .about-us-text .main-text {
+        width: auto;
+        max-width: 500px;
+    }
+    
+    .text-about-us {
+        width: auto;
+        max-width: 500px;
+    }
 }
 
 @media (max-width: 420px) {
@@ -663,5 +783,9 @@ h1 {
 
     .links-networks a:last-child {
         margin-left: 0px;
+    }
+
+    .about-us {
+        margin: 50px 20px;
     }
 }
