@@ -8,6 +8,17 @@ body {
     overflow-x: hidden;
 }
 
+ul {
+    list-style-position: outside;
+    margin: 0;
+    padding: 0;
+}
+
+li {
+    list-style-type: none;
+    list-style-position: inside;
+}
+
 h1, h2, h3, h4, h5, h6, p {
     margin: 0;
     padding: 0;
@@ -167,7 +178,7 @@ h1, h2, h3, h4, h5, h6, p {
     color: #303030;
 }
 
-.contacts a:hover {
+.contacts a:hover, .button:hover {
     color: white;
     background-color: #FF6C00;
 }
@@ -373,7 +384,51 @@ h2 {
     margin-bottom: 20px;
 }
 
+h2.white-h2 {
+    color: white;
+}
 
+.big-image {
+    background-image: url("../img/big-image.jpg");
+    background-size: cover;
+    background-position: center center;
+    padding: 130px 55px;
+    position: relative;
+}
+
+.dark-background {
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    right: 0;
+    left: 0;
+    background-color: #111319;
+    opacity: 0.8;
+    height: 100%;
+}
+
+.services-prices {
+    z-index: 2;
+    position: relative;
+}
+
+.blocks-services {
+    margin: 44px 0px 50px;
+    display: flex;
+}
+
+.block-services {
+    padding: 30px 40px;
+    flex-basis: 50%;
+}
+
+.block-services:first-child {
+    background: linear-gradient(180deg, #171A24 0%, rgba(23, 26, 36, 0.20) 100%);
+}
+
+.block-services:last-child {
+    background: linear-gradient(180deg, #090B13 0%, rgba(9, 11, 19, 0.20) 100%);
+}
 
 @media (max-width: 1150px) {
     .main-block {
