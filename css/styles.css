@@ -463,6 +463,83 @@ h2.white-h2 {
     margin: 0 auto;
 }
 
+ /*Thsi section */
+
+.advantages {
+    margin: 121px 125px 130px 155px;
+    display: flex;
+    justify-content: space-between;
+}
+
+.people-count {
+    display: flex;
+    gap: 30px;
+}
+
+.blocks-statistic {
+    display: flex;
+    flex-direction: column;
+    gap: 30px;
+}
+
+.blocks-statistic:nth-child(2) {
+    margin-top: 35px;
+}
+
+.block-statistic {
+    width: 170px;
+    height: 133px;
+    background-color: #F7F7F7;
+    text-align: center;
+}
+
+.count {
+    position: relative;
+    margin: 20px 0px 6px;
+    display: inline-block;
+    margin-bottom: 6px;
+}
+
+.big-number {
+    color: #303030;
+    text-align: center;
+    font-family: "Open Sans";
+    font-size: 42px;
+    font-weight: 700;
+    letter-spacing: 2.1px;
+}
+
+.small-symbol {
+    position: absolute;
+    right: -15px;
+    bottom: 28px;
+    color: #FF6C00;
+    text-align: center;
+    font-family: "Open Sans";
+    font-size: 16px;
+    font-weight: 600;
+    line-height: normal;
+}
+
+.people {
+    margin: 0 20px;
+    color: #303030;
+    text-align: center;
+    font-family: "Open Sans";
+    font-size: 11px;
+    font-weight: 600;
+    line-height: normal;
+}
+
+.advantages-content h2{
+   width: 412px;
+}
+
+.advantages-content .main-text{
+   width: 500px;
+}
+  /*Thsi section */
+
 @media (max-width: 1150px) {
     .main-block {
         margin-right: 39px;
