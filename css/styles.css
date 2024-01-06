@@ -621,6 +621,7 @@ h2.white-h2 {
     align-items: center;
     text-decoration: none;
     color: #303030;
+    font-size: 20px;
 }
 
 .acount-network:hover {
@@ -634,6 +635,12 @@ h2.white-h2 {
 
     .advantages {
         gap: 200px;
+    }
+}
+
+@media (max-width: 1280px) {
+    .master {
+        width: 330px;
     }
 }
 
@@ -766,6 +773,30 @@ h2.white-h2 {
         font-size: 18px;
         line-height: 30px;
         letter-spacing: 0.36px;
+    }
+
+    .background-gray {
+        padding: 100px 0px;
+    }
+
+    .our-masters {
+        width: 450px;
+        margin: 0 auto;
+    }
+
+    .our-masters h2 {
+        font-size: 42px;
+        line-height: normal;
+        letter-spacing: 2.1px;
+    }
+
+    .masters {
+        flex-direction: column;
+        gap: 64px;
+    }
+
+    .master {
+        width: 100%;
     }
 }
 
@@ -1006,6 +1037,15 @@ h2.white-h2 {
     .advantages-content h2, .advantages-content .main-text {
         width: 418px;
     }
+
+    .background-gray {
+        padding: 84px 0px;
+    }
+
+    .our-masters {
+        width: 418px;
+        margin: 0 auto;
+    }
 }
 
 @media (max-width: 480px) {
@@ -1065,6 +1105,37 @@ h2.white-h2 {
 
     .block-statistic {
         width: 250px;
+    }
+
+    .background-gray {
+        padding: 50px 20px;
+    }
+    
+    .our-masters .quote {
+        margin-bottom: 10px;
+    }
+
+    .our-masters h2 {
+        font-size: 28px;
+        line-height: normal;
+        letter-spacing: 1.4px;
+        margin-bottom: 22px;
+    }
+
+    .our-masters {
+        width: auto;
+    }
+    
+    .masters {
+        gap: 32px;
+    }
+
+    .master-image {
+        height: 250px;
+    }
+
+    .about-master {
+        margin: 10px auto;
     }
 }
 
