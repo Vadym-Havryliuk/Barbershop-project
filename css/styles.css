@@ -466,9 +466,10 @@ h2.white-h2 {
  /*Thsi section */
 
 .advantages {
-    margin: 121px 125px 130px 155px;
+    margin: 121px auto 130px;
     display: flex;
-    justify-content: space-between;
+    justify-content: center;
+    gap: 130px;
 }
 
 .people-count {
@@ -522,13 +523,18 @@ h2.white-h2 {
 }
 
 .people {
-    margin: 0 20px;
+    margin: 0 auto;
     color: #303030;
     text-align: center;
     font-family: "Open Sans";
     font-size: 11px;
     font-weight: 600;
     line-height: normal;
+    width: 122px;
+}
+
+.people-last {
+    width: 130px;
 }
 
 .advantages-content h2{
@@ -539,6 +545,16 @@ h2.white-h2 {
    width: 500px;
 }
   /*Thsi section */
+
+@media (min-width: 1550px) {
+    .block-statistic {
+        width: 220px;
+    }
+
+    .advantages {
+        gap: 200px;
+    }
+}
 
 @media (max-width: 1150px) {
     .main-block {
@@ -643,6 +659,32 @@ h2.white-h2 {
 
     .block-services:not(:last-child) .about-service:last-child {
         margin-bottom: 20px;
+    }
+
+    .advantages {
+        margin: 100px 40px;
+        flex-direction: column-reverse;
+        justify-content: flex-start;
+        gap: 44px;
+    }
+
+    .people-count {
+        align-self: flex-end;
+    }
+
+    .block-statistic {
+        width: 210px;
+    }
+
+    .advantages-content h2 {
+        font-size: 42px;
+        letter-spacing: 2.1px;
+    }
+
+    .advantages-content .main-text {
+        font-size: 18px;
+        line-height: 30px;
+        letter-spacing: 0.36px;
     }
 }
 
@@ -865,6 +907,23 @@ h2.white-h2 {
 
     .decoration {
         margin-top: 19px;
+    }
+
+    .advantages {
+        margin: 84px auto;
+        align-items: center;
+    }
+
+    .people-count {
+        align-self: center;
+    }
+
+    .block-statistic {
+        width: 194px;
+    }
+
+    .advantages-content h2, .advantages-content .main-text {
+        width: 418px;
     }
 }
 
