@@ -628,6 +628,42 @@ h2.white-h2 {
     color: #FF6C00;
 }
 
+.four-images {
+    padding: 130px 55px;
+}
+
+.beard .quote {
+    margin-bottom: 44px;
+}
+
+.images-beard {
+    display: flex;
+    justify-content: space-between;
+}
+
+.image-beard {
+    width: 270px;
+    height: 360px;
+    background-position: center center;
+    background-size: cover;
+}
+
+.image-beard:nth-child(1) {
+    background-image: url("../img/image-1.jpg");
+}
+
+.image-beard:nth-child(2) {
+    background-image: url("../img/image-2.jpg");
+}
+
+.image-beard:nth-child(3) {
+    background-image: url("../img/image-3.jpg");
+}
+
+.image-beard:nth-child(4) {
+    background-image: url("../img/image-4.jpg");
+}
+
 @media (min-width: 1550px) {
     .block-statistic {
         width: 220px;
@@ -636,11 +672,21 @@ h2.white-h2 {
     .advantages {
         gap: 200px;
     }
+
+    .image-beard {
+        width: 320px;
+        height: 430px;
+    }
 }
 
 @media (max-width: 1280px) {
     .master {
         width: 330px;
+    }
+
+    .image-beard {
+        width: 240px;
+        height: 310px;
     }
 }
 
@@ -797,6 +843,25 @@ h2.white-h2 {
 
     .master {
         width: 100%;
+    }
+
+    .four-images {
+        padding: 100px 0px;
+    }
+
+    .beard {
+        margin: 0 auto;
+        width: 690px;
+    }
+
+    .images-beard {
+        flex-wrap: wrap;
+        gap: 30px;
+    }
+
+    .image-beard {
+        width: 330px;
+        height: 360px;
     }
 }
 
@@ -1046,6 +1111,28 @@ h2.white-h2 {
         width: 418px;
         margin: 0 auto;
     }
+
+    .four-images {
+        padding: 84px 0px;
+    }
+
+    .beard {
+        width: 418px;
+        margin: 0px auto;
+    }
+
+    .beard .quote {
+        align-items: flex-start;
+    }
+
+    .beard .line-quote {
+        margin-top: 10px;
+    }
+
+    .image-beard {
+        width: 100%;
+        height: 360px;
+    }
 }
 
 @media (max-width: 480px) {
@@ -1136,6 +1223,22 @@ h2.white-h2 {
 
     .about-master {
         margin: 10px auto;
+    }
+
+    .four-images {
+        padding: 50px 20px;
+    }
+
+    .beard {
+        width: auto;
+    }
+
+    .beard .quote {
+        margin-bottom: 22px;
+    }
+
+    .image-beard {
+        height: 240px;
     }
 }
 
