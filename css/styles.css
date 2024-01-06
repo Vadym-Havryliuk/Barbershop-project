@@ -664,6 +664,10 @@ h2.white-h2 {
     background-image: url("../img/image-4.jpg");
 }
 
+.two-sections {
+    display: flex;
+}
+
 @media (min-width: 1550px) {
     .block-statistic {
         width: 220px;
@@ -862,6 +866,10 @@ h2.white-h2 {
     .image-beard {
         width: 330px;
         height: 360px;
+    }
+
+    .two-sections {
+        flex-direction: column;
     }
 }
 
