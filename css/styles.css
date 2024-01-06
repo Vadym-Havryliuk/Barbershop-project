@@ -463,8 +463,6 @@ h2.white-h2 {
     margin: 0 auto;
 }
 
- /*Thsi section */
-
 .advantages {
     margin: 121px auto 130px;
     display: flex;
@@ -543,7 +541,91 @@ h2.white-h2 {
 .advantages-content .main-text{
    width: 500px;
 }
-  /*Thsi section */
+
+.background-gray {
+    background-color: #F7F7F7;
+    padding: 130px 55px;
+}
+
+.our-masters h2 {
+    margin-bottom: 44px;
+}
+
+.masters {
+    display: flex;
+    justify-content: space-between;
+}
+
+.master {
+    width: 370px;
+}
+
+.master-image {
+    width: 100%;
+    height: 346px;
+    background-size: cover;
+    background-position: center center;
+}
+
+.master:nth-child(1) .master-image {
+    background-image: url("../img/master-1.jpg");
+}
+
+.master:nth-child(2) .master-image {
+    background-image: url("../img/master-2.jpg");
+}
+
+.master:nth-child(3) .master-image {
+    background-image: url("../img/master-3.jpg");
+}
+
+.about-master {
+    margin: 30px auto;
+    text-align: center;
+}
+
+.master-name {
+    color: #303030;
+    text-align: center;
+    font-family: "Open Sans";
+    font-size: 18px;
+    font-weight: 400;
+    line-height: normal;
+    letter-spacing: 0.36px;
+    margin-bottom: 8px;
+}
+
+.master-position {
+    color: #FF6C00;
+    text-align: center;
+    font-family: "Open Sans";
+    font-size: 14px;
+    font-weight: 400;
+    line-height: normal;
+    letter-spacing: 0.28px;
+}
+
+.acount-networks {
+    display: flex;
+    gap: 10px;
+    justify-content: center;
+}
+
+.acount-network {
+    background-color: white;
+    width: 44px;
+    height: 44px;
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-decoration: none;
+    color: #303030;
+}
+
+.acount-network:hover {
+    color: #FF6C00;
+}
 
 @media (min-width: 1550px) {
     .block-statistic {
