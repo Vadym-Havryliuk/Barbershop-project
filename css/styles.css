@@ -498,7 +498,6 @@ h2.white-h2 {
     position: relative;
     margin: 20px 0px 6px;
     display: inline-block;
-    margin-bottom: 6px;
 }
 
 .big-number {
@@ -949,6 +948,42 @@ h2.white-h2 {
         margin: 30px 0;
         padding: 15px;
     }
+
+    .advantages {
+        margin: 50px 20px;
+    }
+
+    .advantages-content h2, .advantages-content .main-text {
+        max-width: 418px;
+        width: auto;
+    }
+    
+    .advantages-content h2 {
+        margin-bottom: 10px;
+        font-size: 28px;
+        letter-spacing: 1.4px;
+    }
+
+    .advantages .quote {
+        margin-bottom: 10px;
+    }
+
+    .advantages-content .main-text {
+        font-size: 12px;
+        line-height: normal;
+    }
+
+    .people-count {
+        flex-direction: column;
+    }
+
+    .blocks-statistic:nth-child(2) {
+        margin-top: 0px;
+    }
+
+    .block-statistic {
+        width: 250px;
+    }
 }
 
 @media (max-width: 420px) {
@@ -1127,6 +1162,14 @@ h2.white-h2 {
 }
 
 @media (max-width: 320px) {
+    h1 {
+        font-size: 28px;
+    }
+    
+    .main-text {
+        width: auto;
+    }
+    
     .service {
         text-align: left;
         width: auto;
@@ -1146,5 +1189,20 @@ h2.white-h2 {
     .price {
         line-height: normal;
         width: auto;
+    }
+
+    .block-statistic {
+        width: 100%;
+        height: 110px;
+    }
+
+    .people-count, .blocks-statistic  {
+        width: 100%;
+        gap: 15px;
+    }
+
+    .count {
+        margin-bottom: 0px;
+        margin-top: 10px;
     }
 }
