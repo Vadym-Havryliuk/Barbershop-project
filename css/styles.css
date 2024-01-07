@@ -668,6 +668,82 @@ h2.white-h2 {
     display: flex;
 }
 
+.online-registration {
+    background-color: #191C26;
+    flex-grow: 1;
+    padding: 130px 40px 193px 55px;
+}
+
+.online-registration-block h2 {
+    margin-bottom: 44px;
+}
+
+.form .name-phone {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 44px;
+}
+
+.contacts-address {
+    width: 625px;
+}
+
+.elem-form {
+    display: block;
+    outline: none;
+    border-top: none;
+    border-left: none;
+    border-right: none;
+    border-bottom: 1px solid rgba(157, 164, 189, 0.40);
+    background-color: transparent;
+}
+
+.elem-form-2 {
+    display: block;
+    outline: none;
+    border-top: none;
+    border-left: none;
+    border-right: none;
+    border-bottom: 1px solid white;
+    background-color: transparent;
+}
+
+.elem-form:focus {
+    outline: none;
+}
+
+.elem-form::placeholder {
+    color: rgba(157, 164, 189, 0.40);
+    font-family: "Open Sans";
+    font-size: 11px;
+    font-weight: 600;
+    line-height: normal;
+    letter-spacing: 1.1px;
+    text-transform: uppercase;
+}
+
+.elem-form-2::placeholder {
+    color: white;
+    font-family: "Open Sans";
+    font-size: 11px;
+    font-weight: 600;
+    line-height: normal;
+    letter-spacing: 1.1px;
+    text-transform: uppercase;
+}
+
+.input-elem {
+    padding: 0px 0px 8px;
+}
+
+.input-elem:first-child {
+    width: 270px;
+}
+
+.input-elem:last-child {
+    width: 260px;
+}
+
 @media (min-width: 1550px) {
     .block-statistic {
         width: 220px;
@@ -680,6 +756,10 @@ h2.white-h2 {
     .image-beard {
         width: 320px;
         height: 430px;
+    }
+
+    .input-elem:first-child, .input-elem:last-child {
+        width: 340px;
     }
 }
 
@@ -870,6 +950,10 @@ h2.white-h2 {
 
     .two-sections {
         flex-direction: column;
+    }
+
+    .contacts-address {
+        width: 100%;
     }
 }
 

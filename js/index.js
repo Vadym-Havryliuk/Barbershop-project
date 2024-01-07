@@ -29,6 +29,8 @@ let shadow = document.querySelector('.shadow');
 let linksNetworks = document.querySelector('.links-networks');
 let socialNetworks = document.querySelectorAll('.links-networks a');
 
+let elemForm = document.querySelectorAll('.elem-form');
+
 function toggleBack(whiteORgray) {
     textB.classList.toggle(`${whiteORgray}-txt`);
     lineB.classList.toggle(`${whiteORgray}-bg`);
@@ -250,5 +252,29 @@ window.addEventListener('resize', changeDocument);
 menu.addEventListener('click', changeClass1);
 
 closeButton.addEventListener('click', changeClass2);
+
+function isWhite(elem) {
+    elem.classList.replace('elem-form', 'elem-form-2'); 
+}
+
+function isGray(elem) {
+    elem.classList.replace('elem-form-2', 'elem-form');
+}
+
+for (let elem of elemForm) {
+    elem.addEventListener('mouseover', () => {
+        isWhite(elem);
+    });
+    elem.addEventListener('mouseout', () => {
+        isGray(elem);
+    });
+    elem.addEventListener('focus', () => {
+        isWhite(elem);
+    });
+    elem.addEventListener('blur', () => {
+        isGray(elem);
+    });
+}
+
 
  
