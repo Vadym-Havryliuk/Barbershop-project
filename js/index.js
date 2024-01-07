@@ -263,10 +263,14 @@ function isGray(elem) {
 
 for (let elem of elemForm) {
     elem.addEventListener('mouseover', () => {
-        isWhite(elem);
+        if (elem !== document.activeElement) {
+            isWhite(elem);
+        }
     });
     elem.addEventListener('mouseout', () => {
-        isGray(elem);
+        if (elem !== document.activeElement) {
+           isGray(elem);  
+        }
     });
     elem.addEventListener('focus', () => {
         isWhite(elem);
