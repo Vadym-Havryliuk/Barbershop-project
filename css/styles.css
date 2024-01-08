@@ -168,6 +168,8 @@ h1, h2, h3, h4, h5, h6, p {
     padding: 12px 20px;
     border: 1px solid #FF6C00;
     border-radius: 20px;
+    transition-property: color, background-color;
+    transition-duration: 500ms;
 }
 
 .white-button {
@@ -834,7 +836,7 @@ input.button {
     text-decoration: underline;
 }
 
-.main-quote {
+.time-work .main-quote {
     color: white;
 }
 
@@ -845,6 +847,52 @@ input.button {
 .footer-content {
     display: flex;
     justify-content: space-between;
+}
+
+.left-footer {
+    display: flex;
+    gap: 6px;
+    align-items: center;
+}
+
+.left-icon {
+    width: 12px;
+    height: 12px;
+}
+
+.left-text {
+    color: #9DA4BD;
+    font-family: "Open Sans";
+    font-size: 11px;
+    font-weight: 600;
+    line-height: normal;
+    letter-spacing: 2.2px;
+}
+
+.right-footer {
+    display: flex;
+    gap: 40px;
+    align-items: center;
+}
+
+.right-line {
+    width: 60px;
+    height: 1px;
+    background-color: #303030;
+}
+
+.right-text {
+    text-decoration: none;
+    color: #303030;
+    font-family: "Open Sans";
+    font-size: 11px;
+    font-weight: 600;
+    line-height: normal;
+    letter-spacing: 2.2px;
+}
+
+.right-text:hover {
+    color: #FF6C00;
 }
 
 @media (min-width: 1550px) {
@@ -1091,6 +1139,10 @@ input.button {
 
     .contact-info:first-child .contact-text {
         width: 230px;
+    }
+
+    .footer {
+        padding: 56px 39px;
     }
 }
 
@@ -1406,6 +1458,23 @@ input.button {
     .contacts-address-block h2.white-h2 {
         text-align: center;
     }
+
+    .footer {
+        padding: 44px 31px;
+    }
+
+    .footer-content {
+        flex-direction: column-reverse;
+        gap: 20px;
+    }
+
+    .left-footer {
+        align-self: flex-start;
+    }
+
+    .right-footer {
+        align-self: flex-end;
+    }
 }
 
 @media (max-width: 480px) {
@@ -1537,6 +1606,10 @@ input.button {
     .main-contacts {
         font-size: 12px;
         letter-spacing: 0.27px;
+    }
+
+    .right-footer {
+        gap: 20px;
     }
 }
 
@@ -1774,5 +1847,14 @@ input.button {
 
     .contact-icon {
         display: none;
+    }
+
+    .right-line {
+        display: none;
+    }
+
+    .right-footer{
+        flex-direction: column;
+        gap: 10px;
     }
 }
