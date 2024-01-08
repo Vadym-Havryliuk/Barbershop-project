@@ -31,6 +31,15 @@ let socialNetworks = document.querySelectorAll('.links-networks a');
 
 let elemForm = document.querySelectorAll('.elem-form');
 
+let navLinks = document.querySelectorAll('.navigation div');
+
+let aboutUs = document.querySelector('.section-about-us');
+let servicesPrices = document.querySelector('.section-services-prices');
+let ourMasters = document.querySelector('.background-gray');
+let contacts = document.querySelector('.contacts-address');
+
+let arr = [aboutUs, servicesPrices, ourMasters, contacts];
+
 function toggleBack(whiteORgray) {
     textB.classList.toggle(`${whiteORgray}-txt`);
     lineB.classList.toggle(`${whiteORgray}-bg`);
@@ -213,6 +222,7 @@ function changeClass1() {
         shadow.classList.replace('block-shadow', 'block-shadow-dark'); 
     }, 10);
     
+    document.body.style.overflow = 'hidden';
 }
 
 function changeClass2() {
@@ -222,6 +232,8 @@ function changeClass2() {
     setTimeout(function() {
         shadow.classList.replace('block-shadow', 'shadow');
     }, 500);
+
+    document.body.style.overflow = '';
 }
 
 function changeDocument() {
@@ -280,5 +292,13 @@ for (let elem of elemForm) {
     });
 }
 
+for (let i = 0; i < navLinks.length; i++) {
+    navLinks[i].addEventListener('click', () => {
+        arr[i].scrollIntoView(true);
+    });
+}
 
+navLinks[0].addEventListener('click', () => {
+    aboutUs.scrollIntoView(true);
+});
  
